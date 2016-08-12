@@ -9,16 +9,20 @@ Resize images with predefined sizes in config / imageManager.php
 
 ## Install
 
-Via Composer
+Edit your project's composer.json
 
 ``` bash
-$ composer require  kujjs/imageManager
+"require": {
+    "anakadote/laravel-5-image-manager": "dev-master", 
+    "kujjs/resize-image": "dev-master"
+}
 ```
 
 add the service provider. config/app.php
 
 ```php
 kujjs\imageManager\imageManagerServiceProvider::class,
+Anakadote\ImageManager\ImageManagerServiceProvider::class,
 ```
 
 and run the following command
@@ -28,7 +32,7 @@ $ php artisan vendor:publish
 ``` 
 ## Usage
 
-predefine values in **config/image-manager.php**
+predefine values in **config/imageManager.php**
 ```php
     'sizes' => [
         'small' => [
@@ -43,7 +47,7 @@ predefine values in **config/image-manager.php**
 |--------|----|-------------|
 |`width`|*required*|The width of the generated image in pixels.|
 |`height`|*required*|The height of the generated image in pixels.|
-|`mode`|*required*|Defines the way the image will be transformed. See the table below for accepted methods|
+|`mode`|*required*|Defines the way the image will be transformed. See the table below for accepted modes|
 |`quality`|*required*|The quality that will have the final image. range 0-100|
 
 
@@ -79,7 +83,7 @@ return
 | Property || Description |
 |--------|----|-------------|
 |`File`|*required* *(string)*| The fully qualified name of image file. The file must reside in your app's public directory. You'll need to grant write access by the web server to the public directory and its children|
-|`Size Name`|*(optional)* *(string)*|The name of the size that is defined in **config/image-manager.php**.|
+|`Size Name`|*(optional)* *(string)*|The name of the size that is defined in **config/imageManager.php**.|
 |`Html`|*(optional)* *(string)*|returns tag `<img>` with different attributes. See the table below for accepted|
 
 
@@ -91,7 +95,7 @@ return
 |`Class`|*(optional)*|Css Class|
 # Remove
 ##**Image::delete($file)**
-remove image with all size declarade in config/image-manager.php
+remove image with all size declarade in config/imageManager.php
 ```php
     Image::delete(public_path() .'/img/image.jpg')
 ```

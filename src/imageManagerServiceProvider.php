@@ -14,7 +14,7 @@ class imageManagerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/image-manager.php' => config_path('image-manager.php'),
+            __DIR__.'/../config/image-manager.php' => config_path('imageManager.php'),
             ]);
     }
 

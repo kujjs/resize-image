@@ -16,7 +16,7 @@ class imageManager
 	protected $ImageManager;
 	function __construct()
 	{
-		$this->config = Config('image-manager');
+		$this->config = Config('imageManager');
 		$this->ImageManager = new AnakadoteImageManager();
 	}
 	/**
