@@ -27,7 +27,7 @@ class imageManagerServiceProvider extends ServiceProvider
     {
         $this->app['ImageManager'] = $this->app->share(function($app)
         {
-            return new ImageManager;
+            return new imageManager;
         });
         
         // Register Facade
