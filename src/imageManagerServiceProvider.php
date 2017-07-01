@@ -25,10 +25,10 @@ class imageManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(kujjs\imageManager::class, function($app) {
-            return new ImageManager;
+        $this->app->singleton(kujjs\imageManager\Facades\ImageManager::class, function($app) {
+            return new imageManager;
         });
-        
+        $this->app['ImageManager'] = $this->app->make(kujjs\imageManager\Facades\ImageManager::class);
         // Register Facade
         $this->app->booting(function()
         {
