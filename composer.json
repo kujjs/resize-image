@@ -9,7 +9,7 @@
         "images",
         "resize"
     ],
-    "version": "0.5.2.1",
+    "version": "0.5.4.1",
     "minimum-stability": "dev",
     "homepage": "https://github.com/kujjs/resize-image",
     "license": "MIT",
