@@ -1,4 +1,4 @@
-#Image Resizing  Package for Laravel 5.*
+##Image Resizing  Package for Laravel 5.* (update 01/07/2017)
 
 [![Laravel](https://img.shields.io/badge/Laravel-5.*-orange.svg?style=flat-square)](http://laravel.com)
 [![Software License][ico-license]](LICENSE.md)
