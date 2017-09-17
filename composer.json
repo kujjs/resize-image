@@ -9,7 +9,7 @@
         "images",
         "resize"
     ],
-    "version": "0.5.5.0",
+    "version": "0.5.5.1",
     "homepage": "https://github.com/kujjs/resize-image",
     "license": "MIT",
     "authors": [
@@ -26,6 +26,7 @@
         "anakadote/laravel-5-image-manager": "@dev"
 
     },
+    
     "autoload": {
         "psr-4": {
             "kujjs\\imageManager\\": "src"
@@ -41,5 +42,5 @@
             }
         }
     },
-    "prefer-stable": true 
+    "prefer-stable": true
 }

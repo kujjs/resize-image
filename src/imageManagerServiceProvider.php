@@ -29,11 +29,6 @@ class imageManagerServiceProvider extends ServiceProvider
             return new imageManager;
         });
         $this->app['ImageManager'] = $this->app->make(kujjs\imageManager\Facades\ImageManager::class);
-        // Register Facade
-        $this->app->booting(function()
-        {
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Image', 'kujjs\imageManager\Facades\ImageManager');
-        });
+        
     }
 }
