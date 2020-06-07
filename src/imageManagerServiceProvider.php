@@ -14,8 +14,8 @@ class imageManagerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/image-manager.php' => config_path('imageManager.php'),
-            ]);
+            __DIR__ . '/../config/image-manager.php' => config_path('imageManager.php'),
+        ]);
     }
 
     /**
@@ -25,10 +25,10 @@ class imageManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(kujjs\imageManager\Facades\ImageManager::class, function($app) {
+        $this->app->singleton(kujjs\imageManager\Facades\ImageManager::class, function ($app) {
             return new imageManager;
         });
         $this->app['ImageManager'] = $this->app->make(kujjs\imageManager\Facades\ImageManager::class);
-        
+
     }
 }
